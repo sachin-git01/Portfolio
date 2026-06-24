@@ -7,8 +7,8 @@ export default function Hero() {
     <section id="home" className="relative min-h-[100svh] overflow-hidden pt-24 sm:pt-28">
       <div className="scroll-hero-wash absolute inset-0 -z-10" />
       <div className="scroll-hero-orb absolute left-1/2 top-20 -z-10 h-[420px] w-[420px] -translate-x-1/2 rounded-full blur-[90px] md:h-[520px] md:w-[520px] lg:left-[68%]" />
-      <div className="section-shell grid min-h-[calc(100svh-6rem)] items-center gap-10 pb-12 lg:min-h-[calc(100svh-7rem)] lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="reveal-on-load max-w-2xl">
+      <div className="hero-layout section-shell grid min-h-[calc(100svh-6rem)] items-center gap-10 pb-12 lg:min-h-[calc(100svh-7rem)] lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="hero-copy reveal-on-load max-w-2xl">
           <p className="mb-4 inline-flex max-w-full rounded-full border border-cyan/30 bg-cyan/10 px-3 py-2 text-xs font-bold uppercase tracking-[0.16em] text-cyan sm:mb-5 sm:px-4 sm:text-sm sm:tracking-[0.22em]">
             Future-ready developer portfolio
           </p>
@@ -37,7 +37,7 @@ export default function Hero() {
               Connect With Me <FiSend />
             </a>
           </div>
-          <div className="mt-7 grid max-w-xl grid-cols-3 gap-2 sm:mt-9 sm:gap-3">
+          <div className="hero-stats mt-7 grid max-w-xl grid-cols-3 gap-2 sm:mt-9 sm:gap-3">
             {heroStats.map((stat) => (
               <div key={stat.label} className="glass rounded-2xl p-3 sm:p-4">
                 <p className="font-display text-xl font-bold text-cyan sm:text-2xl">{stat.value}</p>
