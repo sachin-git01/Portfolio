@@ -1,14 +1,13 @@
 import { motion } from 'framer-motion';
 import { FiArrowRight, FiSend } from 'react-icons/fi';
 import { heroStats, socials } from '../data/portfolio.js';
-import HeroScene from './HeroScene.jsx';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden pt-24 sm:pt-28">
+    <section id="home" className="relative min-h-[100svh] overflow-hidden pt-24 sm:pt-28">
       <div className="scroll-hero-wash absolute inset-0 -z-10" />
-      <div className="scroll-hero-orb absolute left-1/2 top-20 -z-10 h-[520px] w-[520px] -translate-x-1/2 rounded-full blur-[100px] lg:left-[68%]" />
-      <div className="section-shell grid min-h-[calc(100vh-6rem)] items-center gap-6 pb-12 lg:min-h-[calc(100vh-7rem)] lg:grid-cols-[0.86fr_1.14fr]">
+      <div className="scroll-hero-orb absolute left-1/2 top-20 -z-10 h-[420px] w-[420px] -translate-x-1/2 rounded-full blur-[90px] md:h-[520px] md:w-[520px] lg:left-[68%]" />
+      <div className="section-shell grid min-h-[calc(100svh-6rem)] items-center gap-10 pb-12 lg:min-h-[calc(100svh-7rem)] lg:grid-cols-[0.9fr_1.1fr]">
         <div className="reveal-on-load max-w-2xl">
           <p className="mb-4 inline-flex max-w-full rounded-full border border-cyan/30 bg-cyan/10 px-3 py-2 text-xs font-bold uppercase tracking-[0.16em] text-cyan sm:mb-5 sm:px-4 sm:text-sm sm:tracking-[0.22em]">
             Future-ready developer portfolio
@@ -52,18 +51,36 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.35, duration: 1, ease: 'easeOut' }}
-          className="reveal-on-load relative mx-auto h-[360px] min-h-[330px] w-full max-w-[520px] overflow-visible rounded-full sm:h-[470px] lg:h-[660px] lg:max-w-[720px]"
+          className="hero-showcase reveal-on-load"
         >
-          <div className="absolute inset-4 rounded-full bg-[radial-gradient(circle,rgba(184,251,255,0.22),rgba(155,92,255,0.12)_38%,transparent_68%)] blur-2xl" />
-          <div className="absolute left-1/2 top-1/2 h-[76%] w-[76%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan/20 shadow-[0_0_90px_rgba(0,229,255,0.24),0_0_160px_rgba(255,79,136,0.18)]" />
-          <HeroScene />
-          <div className="pointer-events-none absolute left-1 top-24 hidden rounded-3xl border border-cyan/30 bg-[#071026]/55 px-5 py-4 shadow-neon backdrop-blur-xl md:block">
-            <p className="font-display text-xl font-bold">Full Stack</p>
-            <p className="text-sm text-cyan">Developer</p>
+          <span className="hero-showcase__aura" aria-hidden="true" />
+          <span className="hero-showcase__ring hero-showcase__ring--outer" aria-hidden="true" />
+          <span className="hero-showcase__ring hero-showcase__ring--inner" aria-hidden="true" />
+          <span className="hero-showcase__spark hero-showcase__spark--one" aria-hidden="true" />
+          <span className="hero-showcase__spark hero-showcase__spark--two" aria-hidden="true" />
+          <span className="hero-showcase__spark hero-showcase__spark--three" aria-hidden="true" />
+
+          <div className="hero-avatar-card">
+            <img src="/assets/sachin-hero-avatar-v2.png" alt="Sachin Kumar anime developer avatar" />
           </div>
-          <div className="pointer-events-none absolute bottom-24 right-0 hidden rounded-3xl border border-coral/30 bg-[#160820]/60 px-5 py-4 shadow-coral backdrop-blur-xl md:block">
-            <p className="font-display text-xl font-bold">AI + MERN</p>
-            <p className="text-sm text-coral">Builder</p>
+
+          <div className="hero-platform" aria-hidden="true">
+            <span />
+          </div>
+
+          <div className="hero-chip hero-chip--left">
+            <strong>Full Stack</strong>
+            <span>React + Node</span>
+          </div>
+          <div className="hero-chip hero-chip--right">
+            <strong>MERN Stack</strong>
+            <span>Express APIs</span>
+          </div>
+          <div className="hero-tech-strip" aria-label="Core technologies">
+            <span>MongoDB</span>
+            <span>Express</span>
+            <span>React</span>
+            <span>Node</span>
           </div>
         </motion.div>
       </div>
